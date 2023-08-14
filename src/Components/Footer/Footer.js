@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css';
-import linkedin from './../images/footer-linkedin.png'
-import facebook from './../images/footer-facebook.png'
+import linkedin from './../../images/footer-linkedin.png'
+import facebook from './../../images/footer-facebook.png'
 
 const Footer = () => {
     return (

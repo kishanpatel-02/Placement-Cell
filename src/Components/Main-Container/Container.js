@@ -1,7 +1,7 @@
 import React from 'react'
-import mainimg from './../images/main-img.jpg'
+import mainimg from './../../images/main-img.jpg'
 import './Container.css'
-import Button from './Button'
+import Button from '@mui/material/Button';
 const Container = () => {
   return (
     <div className='img-container' style={{
@@ -22,8 +22,8 @@ const Container = () => {
           IIIT is India's foremost industrial leadership development institution. Our Graduates are a combination of rigorous thinking, hardwork and fundamental stronghold. They are nurtured by the institute to strive for excellence and deliver impact in their field of work. Let us begin...</p>
       </div>
       <div className='container-btn'>
-        <Button label="Student"/>
-        <Button label="Recruiter"/>
+      <Button variant="contained" size="large" style={{marginBottom: '10%'}}>For Students</Button>
+      <Button variant="contained" size="large" >For Companies</Button>
       </div>
     </div>
   )

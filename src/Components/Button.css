@@ -1,0 +1,16 @@
+.btn-btn{
+    background-color: #2196f3; /* Green */
+    border: 3px solid aliceblue;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 226px;
+    height: 50px;
+    margin-bottom: 5%;
+}
+.btn-btn:hover{
+    cursor: pointer;
+}

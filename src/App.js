@@ -1,15 +1,15 @@
 import './App.css';
-import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
-
-import BigContainer from './Components/Main-Container/BigContainer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Homepage from './Pages/Homepage';
+import Studentloginpage from './Pages/Studetnloginpage';
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <BigContainer/>
-      <Footer/>
-    </div>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ <Homepage/> } />
+        <Route path="/student" element={ <Studentloginpage/> } />
+      </Routes>
+      </BrowserRouter>
   );
 }
 

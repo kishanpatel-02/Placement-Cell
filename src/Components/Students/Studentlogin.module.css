@@ -1,0 +1,14 @@
+body, html {
+    height: 100%;
+}
+.student{
+    position: 'relative';
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: max-content;
+    background-image: url('./../../images/loginimage.jpg');
+    min-height: 100vh;
+    min-width:100vw;
+}

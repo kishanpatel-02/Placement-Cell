@@ -1,4 +1,4 @@
-.btn-btn{
+.btn_btn{
     background-color: #2196f3; /* Green */
     border: 3px solid aliceblue;
     box-sizing: border-box;
@@ -11,6 +11,6 @@
     height: 50px;
     margin-bottom: 5%;
 }
-.btn-btn:hover{
+.btn_btn:hover{
     cursor: pointer;
 }

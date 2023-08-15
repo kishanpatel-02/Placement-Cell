@@ -1,4 +1,4 @@
-.img-container{
+.container{
     width: 30%;
     height: 30%;
     display: flex;
@@ -13,7 +13,7 @@
     margin:auto 20px;
     text-align: left;
 }
-.container-btn{
+.container_btn{
     width: 20%;
     height: 70%;
     padding-top: 3.7%;

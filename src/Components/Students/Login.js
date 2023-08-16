@@ -5,7 +5,7 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-import Student from './StudentSignup';
+import Student from './StudentLogin';
 import Recruiter from './Recruiterlogin';
 import { useState } from 'react';
 

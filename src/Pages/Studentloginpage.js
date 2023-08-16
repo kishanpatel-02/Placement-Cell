@@ -1,12 +1,12 @@
 import React from 'react'
 import Login from '../Components/Students/Login'
 
-const Studetnloginpage = () => {
+const Studentloginpage = () => {
   return (
     <div>
-        <Login/>
+      <Login />
     </div>
   )
 }
 
-export default Studetnloginpage
+export default Studentloginpage

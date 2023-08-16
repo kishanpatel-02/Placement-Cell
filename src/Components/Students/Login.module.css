@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+}
+.student{
+    position: 'relative';
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: max-content;
+    background-image: url('./../../images/loginimage.jpg');
+    min-height: 100vh;
+    min-width:100vw;
+}
+
+.loginform{
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 50%;
+    height: 70%;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+.heading{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 20px;
+}
+.tab_box{
+     width: 45%;
+    margin-left: 30%;
+}

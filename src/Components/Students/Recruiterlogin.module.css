@@ -1,0 +1,30 @@
+
+.inputfields{
+    width: 50%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    margin: 2% 10% 2% 25%;
+}
+.TextField{
+    padding-bottom: 20px;
+}
+.signin_btn{
+    display: flex;
+    flex-direction: row;
+}
+.footer_signup{
+    width: 50%;
+    height: 10%;
+    margin-top: 3%;
+    margin-left: 32%;
+}
+.signuplink{
+    color: #007bff;
+    text-decoration: none;
+    margin:auto;
+}
+.message{
+    color: black;
+    font-size: 1.3rem;
+}

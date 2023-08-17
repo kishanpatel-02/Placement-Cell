@@ -9,8 +9,8 @@ import Student from './StudentLogin';
 import Recruiter from './Recruiterlogin';
 import { useState } from 'react';
 
-const Login = () => {
-  const [value, setValue] = useState('1')
+const Login = (props) => {
+  const [value, setValue] = useState(props.tabno)
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

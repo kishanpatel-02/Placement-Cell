@@ -4,7 +4,7 @@ import Login from '../Components/Students/Login'
 const Studentloginpage = () => {
   return (
     <div>
-      <Login tabno="1"/>
+      <Login tabno="2"/>
     </div>
   )
 }

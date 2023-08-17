@@ -4,7 +4,8 @@ import classes from './Recruiterlogin.module.css'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import linkedin from './../Componentsimages/linkedin.png'
-const StudentSignup = () => {
+import { Link } from "react-router-dom";
+const RecruiterSignup = () => {
     return (
         <div>
           <div className={classes.linkedin}>
@@ -33,10 +34,10 @@ const StudentSignup = () => {
                 <p style={{ color: '#007bff', marginLeft: '18%' }}>Forgot Password</p>
             </div>
             <div className={classes.footer_signup}>
-                <p className={classes.message}>Don't have an account? <a className={classes.signuplink}>Register</a></p>
+                <p className={classes.message}>Don't have an account? <a className={classes.signuplink}><Link to="/SignupCompany">Register</Link></a></p>
             </div>
         </div>
     )
 }
 
-export default StudentSignup
+export default RecruiterSignup

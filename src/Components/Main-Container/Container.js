@@ -23,8 +23,8 @@ const Container = () => {
           IIIT is India's foremost industrial leadership development institution. Our Graduates are a combination of rigorous thinking, hardwork and fundamental stronghold. They are nurtured by the institute to strive for excellence and deliver impact in their field of work. Let us begin...</p>
       </div>
       <div className={classes.container_btn}>
-      <Button variant="contained" size="large" style={{marginBottom: '10%'}}><Link to="/student" style={{textDecoration:'none',color:'white'}}>For Students</Link></Button>
-      <Button variant="contained" size="large" >For Companies</Button>
+      <Link to="/student" style={{textDecoration:'none',color:'white'}}><Button variant="contained" size="large" style={{marginBottom: '30%'}}>For Students</Button></Link>
+      <Link to="/company" style={{textDecoration:'none',color:'white'}}><Button variant="contained" size="large" >For Companys</Button></Link>
       </div>
     </div>
   )

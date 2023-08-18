@@ -1,0 +1,52 @@
+.container{
+    height: 30%;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    background-color: black;
+    text-align: center;
+    font-size: 1rem;
+    color: #ccc;
+}
+.bodycnt{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-right: 5%;
+}
+.details{
+    width: 70%;
+}
+.element{
+    display: flex;
+    flex-direction: row;
+    height:  40px;
+}
+.title{
+    width: 30%;
+    background-color: rgb(101, 129, 224);
+    border-bottom: 1px solid white;
+}
+.value{
+    width: 75%;
+    border: 1px solid black;
+    padding: 2px 5px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+p{
+    color: white;
+    margin-left: 20px;
+}
+.image{
+    width:  30%;
+}

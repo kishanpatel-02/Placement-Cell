@@ -17,16 +17,6 @@ const CompanySignupForm = () => {
         companylogo: '',
         aboutcompany: ''
     });
-    const [isSubmitted, setisSubmitted] = React.useState(false);
-
-    const handleOnChange = event => {
-        const target = event.currentTarget
-
-        setInputValues({
-            ...inputvalues,
-            [target.name]: target.value
-        })
-    }
 
     const handleSubmit = event => {
         event.preventDefault()
@@ -38,9 +28,9 @@ const CompanySignupForm = () => {
             companylogo: inputvalues.companylogo,
             aboutcompany: inputvalues.aboutcompany
         }
+        // console.log(newObj)
         setCompanyData([...companydata, newObj])
         console.log(companydata)
-        setisSubmitted(true);
         setInputValues({
             HRemail: '',
             password: '',
@@ -57,34 +47,36 @@ const CompanySignupForm = () => {
                 <div className={classes.form_containers}>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">HR Email</label>
-                        <input onChange={handleOnChange} type='email' name='HRemail' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, HRemail: e.target.value }) }}  value={inputvalues.HRemail} type='email' name='HRemail' className={classes.inputtext} required />
                     </div>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">Password</label>
-                        <input onChange={handleOnChange} type='password' name='password' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, password: e.target.value }) }}  value={inputvalues.password} type='password' name='password' className={classes.inputtext} required />
                     </div>
                 </div>
                 <div className={classes.form_containers}>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">Company Name</label>
-                        <input onChange={handleOnChange} type='text' name='companyname' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, companyname: e.target.value }) }}  value={inputvalues.companyname} type='text' name='companyname' className={classes.inputtext} required />
                     </div>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">Contact No.</label>
-                        <input onChange={handleOnChange} type='text' name='contactno' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, contactno: e.target.value }) }}  value={inputvalues.contactno} type='text' name='contactno' className={classes.inputtext} required />
                     </div>
                 </div>
                 <div className={classes.label_div} style={{ marginBottom: '5%' }}>
                     <label htmlFor="fname">Company Logo</label>
-                    <input onChange={handleOnChange} type='file' name='companylogo' />
+                    <input onChange={(e) => { setInputValues({ ...inputvalues, companylogo: e.target.value }) }}  value={inputvalues.companylogo} type='file' name='companylogo' />
                 </div>
                 <div className={classes.form_containers}>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">About Company</label>
-                        <input onChange={handleOnChange} type='text' name='aboutcompany' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, aboutcompany: e.target.value }) }}  value={inputvalues.aboutcompany} type='text' name='aboutcompany' className={classes.inputtext} required />
                     </div>
                 </div>
-                <Link to='/Company' ><Button variant="contained" style={{ width: '200px', height: '50px', borderRadius: '20px', marginLeft: '35%', marginTop: '5%' }} type='submit' >Register</Button></Link>
+                <Link to='/Company' >
+                    <Button variant="contained" style={{ width: '200px', height: '50px', borderRadius: '20px', marginLeft: '35%', marginTop: '5%' }} type='submit' >Register</Button>
+                    </Link>
 
             </form>
             <Footer />

@@ -9,6 +9,9 @@ import Admin from './Pages/AdminPages/Adminpage';
 import AdminCmplist from './Pages/AdminPages/AdminCmplist';
 import AdminStudlist from './Pages/AdminPages/AdminStdlist';
 import AdminJoblist from './Pages/AdminPages/AdminJoblist';
+import CompanyReport from './Pages/AdminPages/CompanyReport';
+import Addjob from './Pages/AdminPages/AddJobpage';
+import Addcompany from './Pages/AdminPages/AddCompanypage';
 function App() {
   return (
       <BrowserRouter>
@@ -22,6 +25,9 @@ function App() {
         <Route path="/admincompanylist" element={ <AdminCmplist/> } />
         <Route path="/adminjoblist" element={ <AdminJoblist/> } />
         <Route path="/adminstudentlist" element={ <AdminStudlist/> } />
+        <Route path="/companyreport" element={ <CompanyReport/> } />
+        <Route path="/addjob" element={ <Addjob/> } />
+        <Route path="/addcompany" element={ <Addcompany/> } />
       </Routes>
       </BrowserRouter>
   );

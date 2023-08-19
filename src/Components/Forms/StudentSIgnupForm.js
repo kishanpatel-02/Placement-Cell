@@ -17,7 +17,7 @@ const StudentSIgnupForm = () => {
 
     const [studentdata, setStudentData] = useState([])
     const [inputvalues, setInputValues] = useState({
-        email: '',
+        clgemailid: '',
         password: '',
         name: '',
         rollno: '',
@@ -26,23 +26,13 @@ const StudentSIgnupForm = () => {
         backlogs: '',
         cpi: '',
         about: '',
-        programme: '',
         branch: ''
     });
-
-    const handleOnChange = event => {
-        const target = event.currentTarget
-
-        setInputValues({
-            ...inputvalues,
-            [target.name]: target.value
-        })
-    }
 
     const handleSubmit = event => {
         event.preventDefault()
         const newObj = {
-            email: inputvalues.email,
+            clgemailid: inputvalues.clgemailid,
             password: inputvalues.password,
             name: inputvalues.name,
             rollno: inputvalues.rollno,
@@ -51,12 +41,12 @@ const StudentSIgnupForm = () => {
             backlogs: inputvalues.backlogs,
             cpi: inputvalues.cpi,
             about: inputvalues.about,
-            programme: inputvalues.programme,
             branch: inputvalues.branch
         }
+        // console.log(newObj)
         setStudentData([...studentdata, newObj])
         setInputValues({
-            email: '',
+            clgemailid: '',
             password: '',
             name: '',
             rollno: '',
@@ -65,9 +55,9 @@ const StudentSIgnupForm = () => {
             backlogs: '',
             cpi: '',
             about: '',
-            programme: '',
             branch: ''
         })
+        // console.log(studentdata)
     }
     return (
         <>
@@ -76,45 +66,45 @@ const StudentSIgnupForm = () => {
                 <div className={classes.form_containers}>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">College Email Id</label>
-                        <input onChange={handleOnChange} type='email' name='clgemailid' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, clgemailid: e.target.value }) }} type='email' value={inputvalues.clgemailid} name='clgemailid' className={classes.inputtext} required />
                     </div>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">Password</label>
-                        <input onChange={handleOnChange} type='password' name='password' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, password: e.target.value }) }} type='password' value={inputvalues.password} name='password' className={classes.inputtext} required />
                     </div>
                 </div>
                 <div className={classes.form_containers}>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">Full Name</label>
-                        <input onChange={handleOnChange} type='text' name='name' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, name: e.target.value }) }} type='text' value={inputvalues.name} name='name' className={classes.inputtext} required />
                     </div>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">Roll No</label>
-                        <input onChange={handleOnChange} type='text' name='rollno' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, rollno: e.target.value }) }} type='text' value={inputvalues.rollno} name='rollno' className={classes.inputtext} required />
                     </div>
                 </div>
                 <div className={classes.label_div} style={{ marginBottom: '5%' }}>
                     <label htmlFor="fname">Profile Pic</label>
-                    <input onChange={handleOnChange} type='file' name='profilepic' />
+                    <input onChange={(e) => { setInputValues({ ...inputvalues, profilepic: e.target.value }) }} type='file' value={inputvalues.profilepic} name='profilepic' />
                 </div>
                 <div className={classes.form_containers}>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">Mobile No.</label>
-                        <input onChange={handleOnChange} type='text' name='mobileno' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, mobileno: e.target.value }) }} type='text' value={inputvalues.mobileno} name='mobileno' className={classes.inputtext} required />
                     </div>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">Active Backlogs</label>
-                        <input onChange={handleOnChange} type='text' name='backlogs' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, backlogs: e.target.value }) }} type='text' value={inputvalues.backlogs} name='backlogs' className={classes.inputtext} required />
                     </div>
                 </div>
                 <div className={classes.form_containers}>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">CPI</label>
-                        <input onChange={handleOnChange} type='text' name='cpi' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, cpi: e.target.value }) }} type='text' value={inputvalues.cpi} name='cpi' className={classes.inputtext} required />
                     </div>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">About Yourself</label>
-                        <input onChange={handleOnChange} type='text' name='about' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, about: e.target.value }) }} type='text' value={inputvalues.about} name='about' className={classes.inputtext} required />
                     </div>
                 </div>
 
@@ -139,10 +129,12 @@ const StudentSIgnupForm = () => {
                     </div>
                     <div className={classes.label_div}>
                         <label htmlFor="fname">Discipline</label>
-                        <input onChange={handleOnChange} type='text' name='discipline' className={classes.inputtext} required />
+                        <input onChange={(e) => { setInputValues({ ...inputvalues, branch: e.target.value }) }} type='text' value={inputvalues.branch} name='branch' className={classes.inputtext} required />
                     </div>
                 </div>
-                <Link to='/Student' ><Button variant="contained" style={{ width: '200px', height: '50px', borderRadius: '20px', marginLeft: '35%', marginTop: '5%' }} type='submit' >Register</Button></Link>
+                <Link to='/Student' >
+                    <Button variant="contained" style={{ width: '200px', height: '50px', borderRadius: '20px', marginLeft: '35%', marginTop: '5%' }} type='submit' >Register</Button>
+                </Link>
 
             </form>
             <Footer />

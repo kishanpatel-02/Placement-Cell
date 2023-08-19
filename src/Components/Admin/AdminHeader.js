@@ -10,7 +10,7 @@ const Header = () => {
                 <Link to='/' style={{textDecoration:'none',marginTop:'5%',marginLeft:'8%',color:'black'}}><h4 className={classes.logo_text}> Placement Cell</h4></Link>
             </div>
             <div className={classes.header_content}>
-                <h5>ABOUT CELL</h5>
+                <h5><Link to="/admin" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>Admin Home</Link></h5>
                 <h5><Link to="/admincompanylist" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>All COMPANIES</Link></h5>
                 <h5 ><Link to="/adminstudentlist" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>All STUDENTS</Link></h5>
                 <h5><Link to="/adminjoblist" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>All Jobs</Link></h5>

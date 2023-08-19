@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 15%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    background-color: #d5b079;
+    padding-bottom: 30px;
+}
+.heading{
+    font-size: 1.5rem;
+    font-weight: 450;
+    border-bottom: 1px solid black;
+}
+.content{
+    display :flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.tags{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: white;
+    background-color: #4668d8;
+    font-size: 1.2rem;
+}

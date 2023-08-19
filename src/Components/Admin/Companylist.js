@@ -9,7 +9,7 @@ const Companylist = () => {
                 return (
                     <div className={classes.container}>
                         <div className={classes.heading}>
-                            <h2>{data.name}</h2>
+                            <h2>{data.companyname}</h2>
                         </div>
                         <div className={classes.bodycnt}>
                             <div className={classes.details}>
@@ -18,7 +18,7 @@ const Companylist = () => {
                                         <p>Company Name</p>
                                     </div>
                                     <div className={classes.value}>
-                                        {data.name}
+                                        {data.companyname}
                                     </div>
                                 </div>
                                 <div className={classes.element}>

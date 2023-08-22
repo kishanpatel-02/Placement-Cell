@@ -15,8 +15,9 @@ const Admin = () => {
       <Link to='/addjob' style={{textDecoration:'none',color:'white'}}> <p className={classes.tags}>Add Job</p></Link>
       <Link to='/admincompanylist' style={{textDecoration:'none',color:'white'}}><p className={classes.tags}>Company Listing</p></Link>
       <Link to='/companyreport' style={{textDecoration:'none',color:'white'}}><p className={classes.tags}>Company Report</p></Link>
-      <Link to='/adminjoblist' style={{textDecoration:'none',color:'white'}}><p className={classes.tags}>Job Listing</p></Link>
+      <Link to='/studentreport' style={{textDecoration:'none',color:'white'}}><p className={classes.tags}>Student Report</p></Link>
       <Link to='/jobreport' style={{textDecoration:'none',color:'white'}}> <p className={classes.tags}>Job Report</p></Link>
+      <Link to='/changepassword' style={{textDecoration:'none',color:'white'}}> <p className={classes.tags}>Change Password</p></Link>
       </div>
     </div>
     </>

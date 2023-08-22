@@ -1,15 +1,15 @@
 import React from 'react'
 import Header from '../../Components/Admin/AdminHeader'
 import Footer from '../../Components/Footer/Footer'
-import Studentlist from '../../Components/Admin/Studentlist'
-const AdminStdlist = () => {
+import JobReport from '../../Components/Admin/JobReport'
+const AdminJobReport = () => {
   return (
     <>
     <Header/>
-    <Studentlist/>
+    <JobReport/>
     <Footer/>
     </>
   )
 }
 
-export default AdminStdlist
+export default AdminJobReport

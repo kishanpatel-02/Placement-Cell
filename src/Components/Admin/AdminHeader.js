@@ -12,7 +12,7 @@ const Header = () => {
             <div className={classes.header_content}>
                 <h5><Link to="/admin" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>Admin Home</Link></h5>
                 <h5><Link to="/admincompanylist" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>All COMPANIES</Link></h5>
-                <h5 ><Link to="/adminstudentlist" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>All STUDENTS</Link></h5>
+                <h5 ><Link to="/studentreport" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>All STUDENTS</Link></h5>
                 <h5><Link to="/adminjoblist" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>All Jobs</Link></h5>
             </div>
         </nav>

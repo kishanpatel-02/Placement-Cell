@@ -7,9 +7,9 @@ import SignupCompany from './Pages/CompanySignuppage'
 import Companyloginpage from './Pages/Companyloginpage';
 import Admin from './Pages/AdminPages/Adminpage';
 import AdminCmplist from './Pages/AdminPages/AdminCmplist';
-import AdminStudlist from './Pages/AdminPages/AdminStdlist';
-import AdminJoblist from './Pages/AdminPages/AdminJoblist';
+import StudentReport from './Pages/AdminPages/AdminStudentReport';
 import CompanyReport from './Pages/AdminPages/CompanyReport';
+import JobReport from './Pages/AdminPages/AdminJobReport';
 import Addjob from './Pages/AdminPages/AddJobpage';
 import Addcompany from './Pages/AdminPages/AddCompanypage';
 function App() {
@@ -23,9 +23,9 @@ function App() {
         <Route path="/SignupCompany" element={ <SignupCompany/> } />
         <Route path="/Admin" element={ <Admin/> }/>
         <Route path="/admincompanylist" element={ <AdminCmplist/> } />
-        <Route path="/adminjoblist" element={ <AdminJoblist/> } />
-        <Route path="/adminstudentlist" element={ <AdminStudlist/> } />
+        <Route path="/studentreport" element={ <StudentReport/> } />
         <Route path="/companyreport" element={ <CompanyReport/> } />
+        <Route path="/jobreport" element={ <JobReport/> } />
         <Route path="/addjob" element={ <Addjob/> } />
         <Route path="/addcompany" element={ <Addcompany/> } />
       </Routes>

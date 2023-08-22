@@ -7,15 +7,13 @@ import Select from '@mui/material/Select';
 import Button from '@mui/material/Button';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const StudentSIgnupForm = () => {
-
+    const navigate = useNavigate();
     const [programme, setProgramme] = React.useState('Choose');
     const handleChange = (event) => {
         setProgramme(event.target.value);
     };
-
-    const [studentdata, setStudentData] = useState([])
     const [inputvalues, setInputValues] = useState({
         clgemailid: '',
         password: '',
@@ -30,6 +28,7 @@ const StudentSIgnupForm = () => {
     });
 
     const handleSubmit = event => {
+
         event.preventDefault()
         const newObj = {
             clgemailid: inputvalues.clgemailid,
@@ -43,21 +42,27 @@ const StudentSIgnupForm = () => {
             about: inputvalues.about,
             branch: inputvalues.branch
         }
-        // console.log(newObj)
-        setStudentData([...studentdata, newObj])
-        setInputValues({
-            clgemailid: '',
-            password: '',
-            name: '',
-            rollno: '',
-            profilepic: '',
-            mobileno: '',
-            backlogs: '',
-            cpi: '',
-            about: '',
-            branch: ''
-        })
-        // console.log(studentdata)
+        const isvalidmobileno = inputvalues.mobileno.length === 10;
+        if (isvalidmobileno) {
+            navigate('/student')
+            setInputValues({
+                clgemailid: '',
+                password: '',
+                name: '',
+                rollno: '',
+                profilepic: '',
+                mobileno: '',
+                backlogs: '',
+                cpi: '',
+                about: '',
+                branch: ''
+            })
+        } else {
+            alert('Please enter valid mobile number')
+            setInputValues({
+                mobileno: '',
+            })
+        }
     }
     return (
         <>
@@ -132,9 +137,7 @@ const StudentSIgnupForm = () => {
                         <input onChange={(e) => { setInputValues({ ...inputvalues, branch: e.target.value }) }} type='text' value={inputvalues.branch} name='branch' className={classes.inputtext} required />
                     </div>
                 </div>
-                <Link to='/Student' >
-                    <Button variant="contained" style={{ width: '200px', height: '50px', borderRadius: '20px', marginLeft: '35%', marginTop: '5%' }} type='submit' >Register</Button>
-                </Link>
+                <Button variant="contained" style={{ width: '200px', height: '50px', borderRadius: '20px', marginLeft: '35%', marginTop: '5%' }} type='submit' >Register</Button>
 
             </form>
             <Footer />

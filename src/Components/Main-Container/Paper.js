@@ -13,7 +13,7 @@ export default function Paper() {
             {dataarray.map((data) => (
                 <Card sx={{ maxWidth: 345, height:'325px',backgroundColor:'#d6d6d8b3' }} style={{ margin: '20px 0' }}>
                     <CardMedia sx={{ height: 140 }} >
-                        <img src={data.imgURL} alt='' style={{ height: '120px', width: '45%',marginTop:'10px' }} />
+                        <img src={data.imgURL} alt='' style={{ height: '120px', width: '45%',marginTop:'10px',marginLeft:'25%' }} />
                     </CardMedia>
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">

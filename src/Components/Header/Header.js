@@ -11,9 +11,9 @@ const Header = () => {
             </div>
             <div className={classes.header_content}>
                 <h5>ABOUT CELL</h5>
-                <h5><Link to="/company" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>FOR COMPANIES</Link></h5>
-                <h5 ><Link to="/student" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>FOR STUDENTS</Link></h5>
-                <h5>CONTACT</h5>
+                <Link to="/company" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}><h5>FOR COMPANIES</h5></Link>
+                <Link to="/student" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}><h5 >FOR STUDENTS</h5></Link>
+                <Link to="/adminlogin" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}><h5>FOR ADMIN</h5></Link>
             </div>
         </nav>
     )

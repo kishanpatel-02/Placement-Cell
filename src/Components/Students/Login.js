@@ -7,6 +7,7 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import Student from './StudentLogin';
 import Recruiter from './Recruiterlogin';
+import Admin from './Adminlogin';
 import { useState } from 'react';
 
 const Login = (props) => {
@@ -24,12 +25,14 @@ const Login = (props) => {
           <TabContext value={value}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }} className={classes.tab_box} >
               <TabList onChange={handleChange} aria-label="lab API tabs example">
-                <Tab label="Student" value="1" style={{marginRight:'40%'}}/>
-                <Tab label="Recruiter" value="2" />
+                <Tab label="Student" value="0" style={{marginRight:'7%'}}/>
+                <Tab label="Recruiter" value="1"style={{marginRight:'7%'}} />
+                <Tab label="Admin" value="2" />
               </TabList>
             </Box>
-            <TabPanel value="1"><Student/></TabPanel>
-            <TabPanel value="2"><Recruiter/></TabPanel>
+            <TabPanel value="0"><Student/></TabPanel>
+            <TabPanel value="1"><Recruiter/></TabPanel>
+            <TabPanel value="2"><Admin/></TabPanel>
           </TabContext>
         </Box>
 

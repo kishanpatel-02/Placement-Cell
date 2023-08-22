@@ -1,10 +1,10 @@
 import React from 'react'
-import Login from '../Components/Students/Login'
+import Login from '../../Components/Students/Login'
 
 const Studentloginpage = () => {
   return (
     <div>
-      <Login tabno="1"/>
+      <Login tabno="0"/>
     </div>
   )
 }

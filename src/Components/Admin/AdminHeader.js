@@ -14,6 +14,7 @@ const Header = () => {
                 <h5><Link to="/admincompanylist" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>All COMPANIES</Link></h5>
                 <h5 ><Link to="/studentreport" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>All STUDENTS</Link></h5>
                 <h5><Link to="/adminjoblist" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>All Jobs</Link></h5>
+                <h5><Link to="/adminlogin" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>Log Out</Link></h5>
             </div>
         </nav>
     )

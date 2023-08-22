@@ -1,5 +1,5 @@
 import React from 'react'
-import CompanySignup from '../Components/Students/SignUp/SignupCompany'
+import CompanySignup from '../../Components/Students/SignUp/SignupCompany'
 
 const CompanySignuppage = () => {
   return (

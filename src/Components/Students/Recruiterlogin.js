@@ -34,7 +34,7 @@ const RecruiterSignup = () => {
                 <p style={{ color: '#007bff', marginLeft: '18%' }}>Forgot Password</p>
             </div>
             <div className={classes.footer_signup}>
-                <p className={classes.message}>Don't have an account? <a className={classes.signuplink}><Link to="/SignupCompany">Register</Link></a></p>
+                <p className={classes.message}>Don't have an account? <a className={classes.signuplink} href='/'><Link to="/SignupCompany">Register</Link></a></p>
             </div>
         </div>
     )

@@ -7,10 +7,12 @@ import Select from '@mui/material/Select';
 import Button from '@mui/material/Button';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import { MuiFileInput } from 'mui-file-input'
 import { useNavigate } from 'react-router-dom';
 const StudentSIgnupForm = () => {
     const navigate = useNavigate();
     const [programme, setProgramme] = React.useState('Choose');
+    const [profilepic,setProfilepic] = useState(null);
     const handleChange = (event) => {
         setProgramme(event.target.value);
     };
@@ -19,13 +21,15 @@ const StudentSIgnupForm = () => {
         password: '',
         name: '',
         rollno: '',
-        profilepic: '',
         mobileno: '',
         backlogs: '',
         cpi: '',
         about: '',
         branch: ''
     });
+    const handllefileinput = (newFile)=>{
+        setProfilepic(newFile);
+    }
 
     const handleSubmit = event => {
 
@@ -35,7 +39,7 @@ const StudentSIgnupForm = () => {
             password: inputvalues.password,
             name: inputvalues.name,
             rollno: inputvalues.rollno,
-            profilepic: inputvalues.profilepic,
+            profilepic: profilepic,
             mobileno: inputvalues.mobileno,
             backlogs: inputvalues.backlogs,
             cpi: inputvalues.cpi,
@@ -50,13 +54,13 @@ const StudentSIgnupForm = () => {
                 password: '',
                 name: '',
                 rollno: '',
-                profilepic: '',
                 mobileno: '',
                 backlogs: '',
                 cpi: '',
                 about: '',
                 branch: ''
             })
+            setProfilepic(null);
         } else {
             alert('Please enter valid mobile number')
             setInputValues({
@@ -90,7 +94,7 @@ const StudentSIgnupForm = () => {
                 </div>
                 <div className={classes.label_div} style={{ marginBottom: '5%' }}>
                     <label htmlFor="fname">Profile Pic</label>
-                    <input onChange={(e) => { setInputValues({ ...inputvalues, profilepic: e.target.value }) }} type='file' value={inputvalues.profilepic} name='profilepic' />
+                    <MuiFileInput onChange={handllefileinput} value={profilepic} name='profilepic' />
                 </div>
                 <div className={classes.form_containers}>
                     <div className={classes.label_div}>

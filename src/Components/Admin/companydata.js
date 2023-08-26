@@ -7,7 +7,7 @@ const array = [{
     state: 'State 1',
     country: 'Country 1',
     website: 'www.company1.com',
-    logo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-vector%2Fcom',
+    logo: '',
     companydesc: 'hello everyone1'
 },
 {

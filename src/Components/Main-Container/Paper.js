@@ -11,7 +11,7 @@ export default function Paper() {
     return (
         <div style={{ display: 'grid', gridTemplateColumns: '30% 30% 30%', margin: '7% 0% 10% 12%' }}>
             {dataarray.map((data) => (
-                <Card sx={{ maxWidth: 345, height:'325px',backgroundColor:'#d6d6d8b3' }} style={{ margin: '20px 0' }}>
+                <Card sx={{ maxWidth: 345, height:'325px',backgroundColor:'#d6d6d8b3' }} style={{ margin: '20px 0' }} key={data.id}>
                     <CardMedia sx={{ height: 140 }} >
                         <img src={data.imgURL} alt='' style={{ height: '120px', width: '45%',marginTop:'10px',marginLeft:'25%' }} />
                     </CardMedia>

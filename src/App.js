@@ -13,8 +13,12 @@ import JobReport from './Pages/AdminPages/AdminJobReport';
 import Addjob from './Pages/AdminPages/AddJobpage';
 import Addcompany from './Pages/AdminPages/AddCompanypage';
 import Adminlogin from './Pages/LoginPages/Adminloginpage';
+import Protected from './Pages/Protected';
+
 function App() {
+
   return (
+    <>
       <BrowserRouter>
       <Routes>
         <Route path="/" element={ <Homepage/> } />
@@ -23,15 +27,22 @@ function App() {
         <Route path="/company" element={ <Companyloginpage/> } />
         <Route path="/SignupStudent" element={ <SignupStudent/> } />
         <Route path="/SignupCompany" element={ <SignupCompany/> } />
-        <Route path="/Admin" element={ <Admin/> }/>
-        <Route path="/admincompanylist" element={ <AdminCmplist/> } />
-        <Route path="/studentreport" element={ <StudentReport/> } />
-        <Route path="/companyreport" element={ <CompanyReport/> } />
-        <Route path="/jobreport" element={ <JobReport/> } />
-        <Route path="/addjob" element={ <Addjob/> } />
-        <Route path="/addcompany" element={ <Addcompany/> } />
+        {/* <Route path="/admincompanylist" element={ <AdminCmplist/> } /> */}
+        {/* <Route path="/studentreport" element={ <StudentReport/> } /> */}
+        {/* <Route path="/companyreport" element={ <CompanyReport/> } /> */}
+        {/* <Route path="/jobreport" element={ <JobReport/> } /> */}
+        {/* <Route path="/addjob" element={ <Addjob/> } /> */}
+        {/* <Route path="/addcompany" element={ <Addcompany/> } /> */}
+        <Route path="/Admin" element={<Protected> <Admin/> </Protected>}/>
+        <Route path="/admincompanylist" element={<Protected> <AdminCmplist/> </Protected>}/>
+        <Route path="/studentreport" element={<Protected> <StudentReport/> </Protected>}/>
+        <Route path="/companyreport" element={<Protected> <CompanyReport/> </Protected>}/>
+        <Route path="/jobreport" element={<Protected> <JobReport/> </Protected>}/>
+        <Route path="/addjob" element={<Protected> <Addjob/> </Protected>}/>
+        <Route path="/addcompany" element={<Protected> <Addcompany/> </Protected>}/>
       </Routes>
       </BrowserRouter>
+      </>
   );
 }
 

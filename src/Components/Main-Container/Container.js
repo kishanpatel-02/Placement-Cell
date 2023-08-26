@@ -15,16 +15,20 @@ const Container = () => {
       width: '100%'
     }}>
       <div className={classes.headline}>
-        <p ><h1>
-          A One Stop Portal For Placements</h1>
+        <h1 style={{color:'white'}}>
+          A One Stop Portal For Placements
+        </h1>
+
+        <h3 style={{color:'white'}}>
+          Welcome to the recruiment website for IIIT Jabalpur.
+        </h3>
+        <p style={{color:'white'}}>
+        IIIT is India's foremost industrial leadership development institution. Our Graduates are a combination of rigorous thinking, hardwork and fundamental stronghold. They are nurtured by the institute to strive for excellence and deliver impact in their field of work. Let us begin...
         </p>
-        <p><h3>
-          Welcome to the recruiment website for IIIT Jabalpur.</h3>
-          IIIT is India's foremost industrial leadership development institution. Our Graduates are a combination of rigorous thinking, hardwork and fundamental stronghold. They are nurtured by the institute to strive for excellence and deliver impact in their field of work. Let us begin...</p>
       </div>
       <div className={classes.container_btn}>
-      <Link to="/student" style={{textDecoration:'none',color:'white'}}><Button variant="contained" size="large" style={{marginBottom: '30%'}}>For Students</Button></Link>
-      <Link to="/company" style={{textDecoration:'none',color:'white'}}><Button variant="contained" size="large" >For Companys</Button></Link>
+        <Link to="/student" style={{ textDecoration: 'none', color: 'white' }}><Button variant="contained" size="large" style={{ marginBottom: '30%' }}>For Students</Button></Link>
+        <Link to="/company" style={{ textDecoration: 'none', color: 'white' }}><Button variant="contained" size="large" >For Companys</Button></Link>
       </div>
     </div>
   )

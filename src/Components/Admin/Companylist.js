@@ -7,7 +7,7 @@ const Companylist = () => {
         <div>
             {cmpdata.map((data) => {
                 return (
-                    <div className={classes.container}>
+                    <div className={classes.container} key={data.id}>
                         <div className={classes.heading}>
                             <h2>{data.companyname}</h2>
                         </div>

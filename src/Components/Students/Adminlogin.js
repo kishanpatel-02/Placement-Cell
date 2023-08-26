@@ -4,18 +4,24 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { login } from '../../slices/adminSlice';
+import { useNavigate } from 'react-router-dom';
+
 
 const Adminlogin = () => {
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+
     const [email, setEmail] = useState("");
     const [password, setpassword] = useState("");
-    const adminemail =  "kishan292002@gmail.com";
+    const adminemail = "kishan292002@gmail.com";
     const adminpassword = "292002";
     const handleSubmit = (e) => {
         e.preventDefault();
         if (email === adminemail && adminpassword === password) {
-            navigate("/Admin");
+            dispatch(login());
+            navigate('/Admin');
         }
     };
 
@@ -46,7 +52,7 @@ const Adminlogin = () => {
 
                 </Box>
                 <div className={classes.signin_btn}>
-                    <Button variant="contained" type='submit' style={{marginLeft:'42%'}}>SIGN IN</Button>
+                    <Button variant="contained" type='submit' style={{ marginLeft: '42%' }} >SIGN IN</Button>
                 </div>
             </div>
         </form>

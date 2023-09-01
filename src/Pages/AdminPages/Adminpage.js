@@ -6,7 +6,7 @@ import Admin from '../../Components/Admin/Admin'
 const Adminpage = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Admin /> 
       <Footer />
     </>

@@ -22,14 +22,14 @@ const Header = () => {
         <nav className={classes.header}>
             <div className={classes.img_container}>
                 <Link to='/' onClick={(e) => handlehomelogout(e)} style={{textDecoration:'none',marginLeft:'15%'}}><img src={logoimg} className={classes.header_img} alt='' /></Link>
-                <Link to='/' onClick={(e) => handlehomelogout(e)} style={{textDecoration:'none',marginTop:'5%',marginLeft:'8%',color:'black'}}><h4 className={classes.logo_text}> Placement Cell</h4></Link>
+                <Link to='/' onClick={(e) => handlehomelogout(e)} style={{textDecoration:'none',marginTop:'5%',marginLeft:'8%',color:'black'}}><h4 className={classes.logo_text} > Placement Cell</h4></Link>
             </div>
             <div className={classes.header_content}>
-                <h5><Link to="/admin" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>Admin Home</Link></h5>
-                <h5><Link to="/admincompanylist" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>All COMPANIES</Link></h5>
-                <h5 ><Link to="/studentreport" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>All STUDENTS</Link></h5>
-                <h5><Link to="/jobreport" style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>All Jobs</Link></h5>
-                <h5><Link to="/adminlogin" onClick={(e) => handlelogout(e)} style={{textDecoration:'none',color:'rgb(10, 18, 30,0.75)'}}>Log Out</Link></h5>
+                <h5><Link to="/admin" style={{textDecoration:'none',color:'black'}}>Admin Home</Link></h5>
+                <h5><Link to="/admincompanylist" style={{textDecoration:'none',color:'black'}}>All COMPANIES</Link></h5>
+                <h5 ><Link to="/studentreport" style={{textDecoration:'none',color:'black'}}>All STUDENTS</Link></h5>
+                <h5><Link to="/jobreport" style={{textDecoration:'none',color:'black'}}>All Jobs</Link></h5>
+                <h5><Link to="/adminlogin" onClick={(e) => handlelogout(e)} style={{textDecoration:'none',color:'black'}}>Log Out</Link></h5>
             </div>
         </nav>
     )

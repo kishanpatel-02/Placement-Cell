@@ -1,6 +1,6 @@
 .container{
     height: 30%;
-    width: 90%;
+    width: 89%;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 10px;
@@ -49,4 +49,45 @@ p{
 }
 .image{
     width:  30%;
+}
+
+
+
+
+
+
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    /* border-bottom: 2px solid rgb(220, 210, 210); */
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.img_container{
+    width: 25%;
+    height: 35%;
+    display: flex;
+    flex-direction: row;
+}
+.header_img{
+    width: 5rem;
+    margin: auto 0 auto 30%;
+}
+.logo_text{
+    margin: auto 0;
+    margin-right: 20%;
+}
+.header_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto 7%;
+}
+h5{
+    color: rgb(10, 18, 30,0.75);
 }

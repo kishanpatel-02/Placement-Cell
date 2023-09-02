@@ -55,14 +55,14 @@ const JobReport = () => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <StyledTableCell>ID</StyledTableCell>
-              <StyledTableCell style={{width:'20%'}} align="right">Job Title</StyledTableCell>
-              <StyledTableCell align="right">Company</StyledTableCell>
-              <StyledTableCell align="right">Job Type</StyledTableCell>
-              <StyledTableCell align="right">Job Post Date</StyledTableCell>
-              <StyledTableCell align="right">Job City</StyledTableCell>
-              <StyledTableCell align="right">Job Description</StyledTableCell>
-              <StyledTableCell align="right">Action</StyledTableCell>
+              <StyledTableCell style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>ID</StyledTableCell>
+              <StyledTableCell style={{width:'20%',fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}} align="center" >Job Title</StyledTableCell>
+              <StyledTableCell align="center" style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Company</StyledTableCell>
+              <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Job Type</StyledTableCell>
+              <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Job Post Date</StyledTableCell>
+              <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Job City</StyledTableCell>
+              <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Job Description</StyledTableCell>
+              <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Action</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -71,16 +71,16 @@ const JobReport = () => {
                 key={row.id}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <StyledTableCell component="th" scope="row">
+                <StyledTableCell component="th" scope="row"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>
                   {row.id}
                 </StyledTableCell>
-                <StyledTableCell align="right">{row.jobtitle}</StyledTableCell>
-                <StyledTableCell align="right">{row.companyname}</StyledTableCell>
-                <StyledTableCell align="right">{row.jobtype}</StyledTableCell>
-                <StyledTableCell align="right">{row.jobpostdate}</StyledTableCell>
-                <StyledTableCell align="right">{row.city}</StyledTableCell>
-                <StyledTableCell align="right">{row.jobdesc}</StyledTableCell>
-                <StyledTableCell align="right"><Button style={{ width: '5%', height: '30px', marginLeft: '30px' }} variant="contained" color="secondary" onClick={() => deleterow(index)} >Delete</Button></StyledTableCell>
+                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.jobtitle}</StyledTableCell>
+                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.companyname}</StyledTableCell>
+                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.jobtype}</StyledTableCell>
+                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.jobpostdate}</StyledTableCell>
+                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.city}</StyledTableCell>
+                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.jobdesc}</StyledTableCell>
+                <StyledTableCell align="center"><Button style={{ width: '5%', height: '30px', marginLeft: '30px' }} variant="contained" color="secondary" onClick={() => deleterow(index)} >Delete</Button></StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
@@ -92,8 +92,8 @@ const JobReport = () => {
   return (
     <>
       <div className={classes.header}>
-        <h4 style={{marginLeft:'30px',fontSize:'1.5rem'}}>Job Report</h4>
-        <input type="text" placeholder="Search" onChange={handleOnChange} value={search} style={{ width: '20%',height:'50%',padding:'18px',margin:'16px'}} />
+        <h4 style={{marginLeft:'30px',fontSize:'2rem'}}>Job Report</h4>
+        <input type="text" placeholder="Search" onChange={handleOnChange} value={search} style={{ width: '20%', height: '50%', padding: '18px', margin: '35px 20px 0px auto',borderRadius:'10'}} />
       </div>
       {handleSearch()}
     </>

@@ -54,15 +54,15 @@ const Companyreport = () => {
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                         <TableRow>
-                            <StyledTableCell>ID</StyledTableCell>
-                            <StyledTableCell style={{ width: '20%' }} align="right">Logo</StyledTableCell>
-                            <StyledTableCell align="right">Name</StyledTableCell>
-                            <StyledTableCell align="right">Phone</StyledTableCell>
-                            <StyledTableCell align="right">City</StyledTableCell>
-                            <StyledTableCell align="right">State</StyledTableCell>
-                            <StyledTableCell align="right">Webiste</StyledTableCell>
-                            <StyledTableCell align="right">Email</StyledTableCell>
-                            <StyledTableCell align="right">Action</StyledTableCell>
+                            <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>ID</StyledTableCell>
+                            <StyledTableCell style={{ width: '10%',fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}} align="center">Logo</StyledTableCell>
+                            <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Name</StyledTableCell>
+                            <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Phone</StyledTableCell>
+                            <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>City</StyledTableCell>
+                            <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>State</StyledTableCell>
+                            <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Webiste</StyledTableCell>
+                            <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Email</StyledTableCell>
+                            <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Action</StyledTableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -74,14 +74,14 @@ const Companyreport = () => {
                                 <StyledTableCell component="th" scope="row">
                                     {row.id}
                                 </StyledTableCell>
-                                <StyledTableCell ><img src={row.logo} alt='' style={{ width: '50%', height: '50%' }} /></StyledTableCell>
-                                <StyledTableCell align="right">{row.companyname}</StyledTableCell>
-                                <StyledTableCell align="right">{row.phone}</StyledTableCell>
-                                <StyledTableCell align="right">{row.city}</StyledTableCell>
-                                <StyledTableCell align="right">{row.state}</StyledTableCell>
-                                <StyledTableCell align="right">{row.website}</StyledTableCell>
-                                <StyledTableCell align="right">{row.email}</StyledTableCell>
-                                <StyledTableCell align="right"><Button style={{ width: '5%', height: '30px', marginLeft: '30px' }} variant="contained" color="secondary" onClick={() => deleterow(index)} >Delete</Button></StyledTableCell>
+                                <StyledTableCell align="center"><img src={row.logo} alt='' style={{ width: '100%', height: '50%'}} /></StyledTableCell>
+                                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.companyname}</StyledTableCell>
+                                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.phone}</StyledTableCell>
+                                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.city}</StyledTableCell>
+                                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.state}</StyledTableCell>
+                                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.website}</StyledTableCell>
+                                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.email}</StyledTableCell>
+                                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}><Button style={{ width: '5%', height: '30px', marginLeft: '30px' }} variant="contained" color="secondary" onClick={() => deleterow(index)} >Delete</Button></StyledTableCell>
                             </StyledTableRow>
                         ))}
                     </TableBody>
@@ -95,7 +95,7 @@ const Companyreport = () => {
         <>
             <div className={classes.header}>
                 <h4 style={{ marginLeft: '30px', fontSize: '1.5rem' }}>Company Report</h4>
-                <input type="text" placeholder="Search" onChange={handleOnChange} value={search} style={{ width: '20%', height: '50%', padding: '18px', margin: '16px' }} />
+                <input type="text" placeholder="Search" onChange={handleOnChange} value={search} style={{ width: '20%', height: '50%', padding: '18px', margin: '25px 20px 0px auto',borderRadius:'10' }} />
             </div>
             {handleSearch()}
         </>

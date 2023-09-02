@@ -55,15 +55,15 @@ const StudentReport = () => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <StyledTableCell>ID</StyledTableCell>
-              <StyledTableCell style={{width:'20%'}} align="right">Profile Pic</StyledTableCell>
-              <StyledTableCell align="right">Name</StyledTableCell>
-              <StyledTableCell align="right">Phone</StyledTableCell>
-              <StyledTableCell align="right">CPI</StyledTableCell>
-              <StyledTableCell align="right">Backlogs</StyledTableCell>
-              <StyledTableCell align="right">Roll NO</StyledTableCell>
-              <StyledTableCell align="right">College Mail ID</StyledTableCell>
-              <StyledTableCell align="right">Action</StyledTableCell>
+              <StyledTableCell style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>ID</StyledTableCell>
+              <StyledTableCell style={{width:'10%',fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}} align="center">Profile Pic</StyledTableCell>
+              <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Name</StyledTableCell>
+              <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Phone</StyledTableCell>
+              <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>CPI</StyledTableCell>
+              <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Backlogs</StyledTableCell>
+              <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Roll NO</StyledTableCell>
+              <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>College Mail ID</StyledTableCell>
+              <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'Roboto Mano sans-serif'}}>Action</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -72,17 +72,17 @@ const StudentReport = () => {
                 key={row.id}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <StyledTableCell component="th" scope="row">
+                <StyledTableCell component="th" scope="row" style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>
                   {row.id}
                 </StyledTableCell>
-                <StyledTableCell ><img src={row.profilepic} alt='' style={{ width: '20%', height: '20%' }}/></StyledTableCell>
-                <StyledTableCell align="right">{row.name}</StyledTableCell>
-                <StyledTableCell align="right">{row.contact}</StyledTableCell>
-                <StyledTableCell align="right">{row.cpi}</StyledTableCell>
-                <StyledTableCell align="right">{row.backlogs}</StyledTableCell>
-                <StyledTableCell align="right">{row.rollno}</StyledTableCell>
-                <StyledTableCell align="right">{row.clgemailid}</StyledTableCell>
-                <StyledTableCell align="right"><Button style={{ width: '5%', height: '30px', marginLeft: '30px' }} variant="contained" color="secondary" onClick={() => deleterow(index)} >Delete</Button></StyledTableCell>
+                <StyledTableCell align="center"><img src={row.profilepic} alt='' style={{ width: '80%', height: '20%' }}/></StyledTableCell>
+                <StyledTableCell align="center" style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.name}</StyledTableCell>
+                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.contact}</StyledTableCell>
+                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.cpi}</StyledTableCell>
+                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.backlogs}</StyledTableCell>
+                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.rollno}</StyledTableCell>
+                <StyledTableCell align="center"style={{fontSize:'1.2rem',fontFamily:'inter sans-serif'}}>{row.clgemailid}</StyledTableCell>
+                <StyledTableCell align="center"><Button style={{ width: '5%', height: '30px', marginLeft: '30px' }} variant="contained" color="secondary" onClick={() => deleterow(index)} >Delete</Button></StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
@@ -95,7 +95,7 @@ const StudentReport = () => {
     <>
       <div className={classes.header}>
         <h4 style={{marginLeft:'30px',fontSize:'1.5rem'}}>Student Report</h4>
-        <input type="text" placeholder="Search" onChange={handleOnChange} value={search} style={{ width: '20%',height:'50%',padding:'18px',margin:'16px'}} />
+        <input type="text" placeholder="Search" onChange={handleOnChange} value={search} style={{ width: '20%', height: '50%', padding: '18px', margin: '20px 20px 0px auto',borderRadius:'10'}} />
       </div>
       {handleSearch()}
     </>

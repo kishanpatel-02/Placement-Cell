@@ -4,9 +4,7 @@ import logoimg from './../../images/logo.jpg'
 import classes from './Companylist.module.css'
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import emailimg from './Images/cardemail.png'
 import Grid from '@mui/material/Grid';
@@ -15,13 +13,11 @@ import { useDispatch } from 'react-redux';
 import { logout } from '../../slices/adminSlice';
 import { useNavigate } from 'react-router-dom';
 import contactimg from './Images/cardcontact.png'
+import Modal from './Modalcomponent.js'
 
 
 const Companylist = () => {
 
-    // const [open, setOpen] = React.useState(false);
-    // const handleOpen = () => setOpen(true);
-    // const handleClose = () => setOpen(false);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -81,15 +77,14 @@ const Companylist = () => {
                                             </div>
                                         </Typography>
                                     </CardContent>
-                                    <CardActions>
-                                        <Button size="small" >View Details</Button>
-                                </CardActions>
-                            </Card>
+                                    <Modal data={data}/>
+                                </Card>
                             </Grid>
                         ))}
-                </Grid>
-            </Box>
-        </div >
+                    </Grid>
+                </Box>
+                
+            </div >
         </>
     )
 }

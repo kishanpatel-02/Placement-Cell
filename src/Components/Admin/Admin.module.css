@@ -12,6 +12,7 @@
     justify-content: space-between;
     margin-bottom: 0;
     padding-bottom: 0;
+    border-bottom: 2px solid rgb(196, 194, 194);
 }
 
 .img_container{
